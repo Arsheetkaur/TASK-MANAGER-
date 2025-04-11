@@ -1,79 +1,150 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TaskPro - Your Smart Task Manager</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskPro - Ultimate Team Task Manager</title>
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- ===== HEADER NAVIGATION BAR ===== -->
   <header class="navbar">
     <div class="logo">TaskPro</div>
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
+
+        <!-- Features Dropdown Menu with links to separate feature pages -->
         <li class="dropdown">
-          <a href="#features">Features</a>
+          <a href="#">Features</a>
           <ul class="dropdown-menu">
             <li><a href="todo.html">To-Do List</a></li>
-            <li><a href="pomodoro.html">Pomodoro</a></li>
-            <li><a href="collaboration.html">Collaboration</a></li>
-            <li><a href="analytics.html">Analytics</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li><a href="pomodoro.html">Pomodoro + Rewards</a></li>
+            <li><a href="collab.html">Team Collaboration</a></li>
+            <li><a href="focus.html">Focus Mode</a></li>
+            <li><a href="dashboard.html">User Dashboard</a></li>
           </ul>
         </li>
-        <li><a href="#why">Why TaskPro?</a></li>
-        <li><a href="#resources">Articles</a></li>
-        <li><a href="#about">About</a></li>
+
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#how">How to Use</a></li>
+        <li><a href="#reviews">Reviews</a></li>
       </ul>
     </nav>
-    <div class="auth">
+    <div class="auth-buttons">
       <a href="login.html" class="btn">Login</a>
       <a href="signup.html" class="btn primary">Sign Up</a>
     </div>
-  </header>  <section id="home" class="hero">
+  </header>
+
+  <!-- ===== HERO / INTRODUCTION SECTION ===== -->
+  <section id="home" class="hero">
     <div class="hero-content">
-      <div class="text">
-        <h1>Plan Better. Work Smarter.</h1>
-        <p>TaskPro helps teams and individuals manage, track, and complete tasks efficiently — free forever!</p>
-        <a href="dashboard.html" class="btn primary">Get Started</a>
+      <div class="hero-text">
+        <h1>Organize. Focus. Achieve.</h1>
+        <p>The smart task manager built for powerful productivity, fun, and team collaboration — all in one place.</p>
+        <a href="signup.html" class="btn primary">Get Started Free</a>
       </div>
-      <div class="illustration">
-        <img src="https://ouch-cdn2.icons8.com/B_lXs0y_AqSWKXW0kT5cLGqAfBiuh8g8WTmG3MHox7E/rs:fit:640:524/czM6Ly9pY29uczgvZXNzZW50aWFsL2Vzc2VudGlhbC1hbGlnbm1lbnQucG5n.png" alt="Task Manager Illustration"/>
-      </div>
-    </div>
-  </section>  <section id="why" class="info-section">
-    <h2>Why Choose TaskPro?</h2>
-    <div class="cards">
-      <div class="card">Free & Powerful</div>
-      <div class="card">Smart Automation</div>
-      <div class="card">Beautiful UI/UX</div>
-      <div class="card">Team & Solo Friendly</div>
-    </div>
-  </section>  <section id="resources" class="info-section">
-    <h2>Latest Articles & Resources</h2>
-    <p class="center-text">Explore tips, guides, and productivity hacks in our blog section.</p>
-    <div class="articles">
-      <div class="article-card">
-        <h3>Maximize Your Focus with Pomodoro</h3>
-        <p>Discover how short bursts of work improve long-term productivity.</p>
-      </div>
-      <div class="article-card">
-        <h3>How to Stay Organized in a Team</h3>
-        <p>Best practices to ensure smooth collaboration without chaos.</p>
+      <div class="hero-image">
+        <!-- Relevant animated GIF -->
+        <img src="https://i.pinimg.com/originals/cb/80/6b/cb806b41e70e6b6f4334a6c6a1668a46.gif" alt="Productivity GIF"/>
       </div>
     </div>
-  </section>  <section id="about" class="info-section">
-    <h2>About TaskPro</h2>
-    <p class="center-text">TaskPro is built by a passionate team who believe task management should be powerful, intuitive, and free. We're on a mission to help you stay productive, with joy.</p>
-  </section>  <footer class="footer">
-    <p>&copy; 2025 TaskPro. Made with love by Team 5.</p>
+  </section>
+
+  <!-- ===== BENEFITS SECTION ===== -->
+  <section id="benefits" class="benefits">
+    <h2>Why You'll Love TaskPro</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Aesthetic Design</h3>
+        <p>Clean, modern interface designed for clarity and joy.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Fully Animated</h3>
+        <p>Smooth transitions and hover effects bring everything to life.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Boosted Focus</h3>
+        <p>Built-in focus mode & gamification to level up your productivity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES OVERVIEW SECTION (Link to other files) ===== -->
+  <section id="features" class="features">
+    <h2>Explore Our Features</h2>
+    <div class="features-grid">
+      <a href="todo.html" class="feature-card" id="todo">
+        <h3>To-Do List</h3>
+        <p>Manage tasks with drag-and-drop, priorities, and tags.</p>
+      </a>
+      <a href="pomodoro.html" class="feature-card" id="pomodoro">
+        <h3>Pomodoro + Rewards</h3>
+        <p>Work in sessions. Earn points. Play mini-games. Stay focused.</p>
+      </a>
+      <a href="collab.html" class="feature-card" id="collab">
+        <h3>Team Collaboration</h3>
+        <p>Assign tasks, chat with your team, and track joint progress.</p>
+      </a>
+      <a href="focus.html" class="feature-card" id="focus">
+        <h3>Focus Mode</h3>
+        <p>Block distractions and enter deep work with voice controls.</p>
+      </a>
+      <a href="dashboard.html" class="feature-card" id="dashboard">
+        <h3>Personal Dashboard</h3>
+        <p>Visualize your progress, streaks, and daily goals in one place.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO USE SECTION ===== -->
+  <section id="how" class="how-to">
+    <h2>How It Works</h2>
+    <ol class="steps">
+      <li>Sign up and create your workspace.</li>
+      <li>Add tasks or start a focus session with Pomodoro.</li>
+      <li>Invite teammates and collaborate on projects.</li>
+      <li>Track your productivity and earn rewards!</li>
+    </ol>
+  </section>
+
+  <!-- ===== REVIEWS / TESTIMONIALS SECTION ===== -->
+  <section id="reviews" class="reviews">
+    <h2>What Our Users Say</h2>
+    <div class="review-cards">
+      <div class="review">
+        <p>"This is not just a task manager. It’s a motivation booster!"</p>
+        <h4>- Riya, Developer</h4>
+      </div>
+      <div class="review">
+        <p>"Our entire team uses TaskPro daily. Love the gamification!"</p>
+        <h4>- Aarav, Team Lead</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER / SUBSCRIBE SECTION ===== -->
+  <section id="newsletter" class="newsletter">
+    <h2>Stay Updated!</h2>
+    <p>Subscribe to receive the latest features, updates, and tips.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit" class="btn primary">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 TaskPro. Built by Team 5 with love and coffee.</p>
     <div class="footer-links">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
-      <a href="#">Contact</a>
+      <a href="#">Support</a>
     </div>
   </footer>
+
 </body>
 </html>
