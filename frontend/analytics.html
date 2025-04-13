@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics - TaskFlow</title>
+  <link rel="stylesheet" href="analytics.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Your Productivity Stats</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="to-do.html">To-Do</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat-box">
+        <h2 id="totalTasks">0</h2>
+        <p>Tasks Completed</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="totalPomos">0</h2>
+        <p>Pomodoros Completed</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="totalFocus">0 mins</h2>
+        <p>Total Focus Time</p>
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <canvas id="productivityChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <script src="analytics.js"></script>
+</body>
+</html>
