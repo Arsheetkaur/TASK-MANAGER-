@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - TaskFlow</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dashboard</h1>
+    <nav>
+      <a href="to-do.html">To-Do</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="stats.html">Stats</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="overview">
+      <div class="card">
+        <h2>Today's Tasks</h2>
+        <p id="taskCount">0 tasks left</p>
+        <a href="todo.html" class="btn">Go to To-Do</a>
+      </div>
+
+      <div class="card">
+        <h2>Start Focus Session</h2>
+        <p>Ready for a Pomodoro?</p>
+        <a href="pomodoro.html" class="btn">Start Timer</a>
+      </div>
+
+      <div class="card">
+        <h2>Quick Stats</h2>
+        <p id="quickStats">0 tasks | 0 mins focused</p>
+        <a href="stats.html" class="btn">View Stats</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
