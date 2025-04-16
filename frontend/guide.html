@@ -3,39 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TaskFlow Guide</title>
-  <link rel="stylesheet" href="guide.css" />
+  <title>User Guide - TaskFlow</title>
+  <link rel="stylesheet" href="guide.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Welcome to TaskFlow</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="to-do.html">To-Do</a>
-      <a href="pomodoro.html">Pomodoro</a>
-      <a href="stats.html">Stats</a>
-    </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo"><a href="index.html">TaskFlow</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="guide.html" class="active">Guide</a></li>
+    </ul>
   </header>
 
-  <main>
-    <section class="guide-section">
-      <h2>How to Use TaskFlow</h2>
-      <ul>
-        <li><strong>To-Do List:</strong> Add, delete, mark done, and prioritize your tasks.</li>
-        <li><strong>Pomodoro Timer:</strong> Use this to boost productivity using 25/5 minute cycles.</li>
-        <li><strong>Stats:</strong> See how many tasks you've completed and your time spent focused.</li>
-        <li><strong>Settings:</strong> Customize your experience, from themes to timer length.</li>
-      </ul>
-    </section>
+  <!-- Guide Section -->
+  <section class="guide">
+    <h1 class="fade-in">User Guide</h1>
+    <p class="intro fade-in">Follow these simple steps to master TaskFlow and boost your productivity.</p>
 
-    <section class="guide-section">
-      <h2>Tips</h2>
-      <ul>
-        <li>Break large tasks into smaller sub-tasks.</li>
-        <li>Use dark mode at night to reduce eye strain.</li>
-        <li>Enable sound in settings to get notified when a Pomodoro ends.</li>
-      </ul>
-    </section>
-  </main>
+    <div class="timeline">
+
+      <div class="step-card slide-in-left">
+        <span class="step-number">1</span>
+        <h2>Sign Up / Login</h2>
+        <p>Create an account or log in to access all features and track your progress.</p>
+      </div>
+
+      <div class="step-card slide-in-right">
+        <span class="step-number">2</span>
+        <h2>Create Tasks</h2>
+        <p>Add tasks, set priorities, and organize them with tags and deadlines.</p>
+      </div>
+
+      <div class="step-card slide-in-left">
+        <span class="step-number">3</span>
+        <h2>Use Pomodoro Timer</h2>
+        <p>Start focused sessions with timers and reward yourself with points.</p>
+      </div>
+
+      <div class="step-card slide-in-right">
+        <span class="step-number">4</span>
+        <h2>Collaborate</h2>
+        <p>Invite your team, assign tasks, and communicate in real-time.</p>
+      </div>
+
+      <div class="step-card slide-in-up">
+        <span class="step-number">5</span>
+        <h2>Track Progress</h2>
+        <p>Analyze your performance and team productivity using the dashboard.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TaskFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate on scroll
+    const observers = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up').forEach(el => {
+      observers.observe(el);
+    });
+  </script>
+
 </body>
 </html>
