@@ -13,17 +13,29 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">TaskFlow</a>
-        </div>
-        <ul class="nav-links">
+<!-- Beautiful Animated Header -->
+<header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="drop-toggle">Features <span class="arrow">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-        </ul>
-    </header>
+            <li><a href="collaboration.html">Collaboration</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+          </ul>
+        </li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html" class="btn-glow">Signup</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Hero Section with Illustration -->
     <section class="hero">
@@ -40,26 +52,28 @@
     <!-- Features Section -->
     <section class="features">
         <h2>Features</h2>
-        <div class="feature-card">
+        <div class="features-container">
+          <div class="feature-card">
             <img src="https://i.pinimg.com/originals/d2/6c/86/d26c86854a03d2f645437d05b4d6acd6.gif" alt="Task management animation">
             <h3>Task Management</h3>
             <p>Create, assign, and track tasks with powerful yet simple tools.</p>
-        </div>
-        <div class="feature-card">
+          </div>
+          <div class="feature-card">
             <img src="https://i.pinimg.com/736x/40/fb/1f/40fb1f40e7d8d2eb8fc3d9f296896993.jpg" alt="Team collaboration icon">
             <h3>Collaboration</h3>
             <p>Work seamlessly with teammates in real-time and boost team efficiency.</p>
-        </div>
-        <div class="feature-card">
+          </div>
+          <div class="feature-card">
             <img src="https://i.pinimg.com/originals/8c/df/08/8cdf08b343fb88273cdc8801d2a2d7b0.gif" alt="Pomodoro timer animation">
             <h3>Pomodoro Timer</h3>
             <p>Stay focused and productive with integrated time management techniques.</p>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- How It Works Section -->
     <section class="how-it-works">
-        <h2>How TaskFlow Works</h2>
+        <h2>How Task Manager Works</h2>
         <div class="steps">
             <div class="step">
                 <img src="https://i.pinimg.com/736x/20/21/35/20213585795b1d232af28c9106038247.jpg" alt="Sign up illustration">
@@ -79,18 +93,94 @@
         </div>
     </section>
 
+    <!-- Section: Task of the Month -->
+<section class="task-month">
+    <h2>Task of the Month</h2>
+    <div class="task-highlight">
+        <img src="https://i.pinimg.com/736x/30/f4/bc/30f4bca1a4e4c764b5c841910cba768e.jpg" alt="Task achievement illustration">
+        <div>
+            <h3>Launch Your Portfolio Website</h3>
+            <p>This April, focus on completing your personal website and finally put your projects in the spotlight. Add it to your dashboard now!</p>
+            <a href="addtomytasks.html" class="btn-action">Add to My Tasks</a>
+        </div>
+    </div>
+</section>
+
+<!-- Productivity Boost Offer Section -->
+<section class="discount-section">
+    <h2>Advanced</h2>
+    <div class="discount-images">
+        <img src="https://i.pinimg.com/originals/97/b8/b0/97b8b0c78e73a874b7c04328e6da8326.gif"
+            alt="Task management illustration" class="promo-image">
+        <img src="https://i.pinimg.com/originals/7c/e9/e3/7ce9e34927261d3b035090cac779fec5.gif"
+            alt="Productivity boost illustration" class="promo-image">
+    </div>
+    <div class="discount-text">
+        <h2>Up To <span>50% Off Pro</span></h2>
+        <p>Upgrade to TaskFlow Pro and supercharge your productivity. Enjoy advanced analytics, Pomodoro mode, smart reminders, and more.</p>
+        <a href="signup.html" class="shop-now-button">Upgrade Now</a>
+    </div>
+</section>
+
+<!-- Section: Recommended For You -->
+<section class="recommended">
+    <h2>Recommended for You</h2>
+    <div class="recommend-grid">
+        <div class="recommend-card">
+            <h3>Try Our Calendar View</h3>
+            <p>Organize tasks visually with our brand-new calendar layout.</p>
+        </div>
+        <div class="recommend-card">
+            <h3>Pomodoro Timer</h3>
+            <p>Boost focus using built-in Pomodoro sessions with auto breaks.</p>
+        </div>
+        <div class="recommend-card">
+            <h3>Daily Productivity Recap</h3>
+            <p>Get insights into how you're spending time each day.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Upcoming Releases -->
+<section class="upcoming-section">
+    <h2 class="section-title">Upcoming Feature Releases</h2>
+    
+    <div class="release-container">
+      <div class="release-card">
+        <h3>May</h3>
+        <p>AI-Powered Task Suggestions</p>
+      </div>
+      <div class="release-card">
+        <h3>June</h3>
+        <p>Team Chat Integration</p>
+      </div>
+      <div class="release-card">
+        <h3>July</h3>
+        <p>Smart Deadline Detection</p>
+      </div>
+    </div>
+  </section>
+
     <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-            <p>"TaskFlow transformed how we manage our team projects. It's clean, fast, and reliable."</p>
-            <span>- Alex R., Project Manager</span>
-        </div>
-        <div class="testimonial">
-            <p>"Love the Pomodoro feature and the interface. Super easy to use!"</p>
-            <span>- Mia L., Freelancer</span>
-        </div>
-    </section>
+<section class="testimonials-section">
+    <h2 class="section-heading">Testimonials</h2>
+  
+    <div class="testimonial-container">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/8b/1f/9f/8b1f9f145889835124f968a6aa82b79f.jpg" alt="Alex R. photo">
+        <p>"TaskFlow transformed how we manage our team projects. It's clean, fast, and reliable."</p>
+        <span class="name">- Alex R., Project Manager</span>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/8b/1f/9f/8b1f9f145889835124f968a6aa82b79f.jpg" alt="Mia L. photo">
+        <p>"Love the Pomodoro feature and the interface. Super easy to use!"</p>
+        <span class="name">- Mia L., Freelancer</span>
+      </div>
+    </div>
+  </section>
 
 <!-- Section: Latest Productivity Tips (similar to blog posts) -->
 <section class="blog-posts">
@@ -104,7 +194,7 @@
             <img src="https://i.pinimg.com/736x/dd/87/c7/dd87c78e4917be96451280cce352552e.jpg" alt="Top productivity tips illustration">
             <h3>Top 10 Productivity Hacks</h3>
             <p>Unlock your full potential with simple, science-backed productivity tricks.</p>
-            <a href="#" class="read-more">Read More</a>
+            <a href="Blog-post1.html" class="read-more">Read More</a>
         </div>
 
         <!-- Blog Card 2 -->
@@ -112,7 +202,7 @@
             <img src="https://i.pinimg.com/736x/cc/39/4b/cc394b9b32da1622157d884f1e310381.jpg" alt="Focus techniques illustration">
             <h3>Mastering Deep Work</h3>
             <p>Discover how to stay focused and block distractions during intense work sessions.</p>
-            <a href="#" class="read-more">Read More</a>
+            <a href="Blog-post2.html" class="read-more">Read More</a>
         </div>
 
         <!-- Blog Card 3 -->
@@ -120,10 +210,17 @@
             <img src="https://i.pinimg.com/736x/ce/a5/16/cea516a18cbdd75d280b1150797a5c77.jpg" alt="Pomodoro tips illustration">
             <h3>Pomodoro: Work Smart</h3>
             <p>Learn how to use Pomodoro effectively and get more done in less time.</p>
-            <a href="#" class="read-more">Read More</a>
+            <a href="Blog-post3.html" class="read-more">Read More</a>
         </div>
         
     </div>
+</section>
+
+<!-- Section: Special Offers -->
+<section class="special-offers">
+    <h2>Special Offers</h2>
+    <p>Try TaskFlow Pro for 7 days — absolutely free!</p>
+    <a href="signup.html" class="btn-action">Start Free Trial</a>
 </section>
 
 
@@ -138,9 +235,20 @@
         <div class="spotlight-info">
             <h3>Jordan K., Team Lead</h3>
             <p>Jordan has been using TaskFlow for over a year to manage team workflows and deadlines. With features like collaboration and Pomodoro built in, he boosted his team’s output by 40%!</p>
-            <a href="#" class="btn-profile">View Story</a>
+            <a href="story-detail.html" class="btn-profile">View Story</a>
         </div>
     </div>
+</section>
+
+<!-- Section: My Current Tasks (like a shopping cart) -->
+<section class="task-queue">
+    <h2>My Task Queue</h2>
+    <ul class="queue-list">
+        <li>✔ Prepare pitch deck</li>
+        <li>✔ Email client follow-up</li>
+        <li>⬜ Draft new blog post</li>
+    </ul>
+    <a href="tasks.html" class="btn-action">Go to Full Task List</a>
 </section>
 
     <!-- Final Call to Action -->
@@ -150,14 +258,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 TaskFlow. All rights reserved.</p>
-        <div class="footer-links">
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-logo">TaskFlow</div>
+        <nav class="footer-nav">
+            <a href="guide.html">Guide</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="privacy.html">Privacy Policy</a>
-        </div>
-    </footer>
+        </nav>
+        <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
 
 </body>
 </html>
