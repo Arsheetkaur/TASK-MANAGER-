@@ -393,6 +393,7 @@
   position: relative;
 }
 
+<<<<<<< HEAD
 .task-month h2::after {
   content: '';
   width: 70px;
@@ -989,3 +990,10 @@
   font-size: 1rem;
   color: #ccc;
 }
+=======
+.footer-links a {
+  color: #00d4ff;
+  margin: 0 10px;
+  text-decoration: none
+>>>>>>> c593a049b4f367cc43ba86c7814aace1c52c7025
+>>>>>>> 78d5bdb1a31d5688317b1c2b921aae4113fc7c17
