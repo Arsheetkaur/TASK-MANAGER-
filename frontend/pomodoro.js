@@ -1,59 +1,71 @@
+// Initialize variables
 let timer;
-let timeLeft = 1500; // default 25 minutes
-let running = false;
-let currentMode = "pomodoro"; // default
+let isRunning = false;
+let minutes = 25;  // Pomodoro work duration in minutes
+let seconds = 0;
+let progress = 0;
+let timerDuration = minutes * 60 * 1000;  // Convert to milliseconds
+const timeDisplay = document.getElementById("time-display");
+const progressBar = document.getElementById("progress");
+const startButton = document.getElementById("start-btn");
+const resetButton = document.getElementById("reset-btn");
 
-const timerDisplay = document.getElementById("timerDisplay");
-
-const modes = {
-  pomodoro: 25 * 60,
-  shortBreak: 5 * 60,
-  longBreak: 15 * 60,
-};
-
-function updateDisplay() {
-  const minutes = Math.floor(timeLeft / 60)
-    .toString()
-    .padStart(2, "0");
-  const seconds = (timeLeft % 60).toString().padStart(2, "0");
-  `timerDisplay.textContent = ${minutes}:${seconds}`;
-}
-
-function startPauseTimer() {
-  if (running) {
-    clearInterval(timer);
-    running = false;
-  } else {
-    running = true;
-    timer = setInterval(() => {
-      if (timeLeft > 0) {
-        timeLeft--;
-        updateDisplay();
-      } else {
+// Start or pause the timer
+function toggleTimer() {
+    if (isRunning) {
         clearInterval(timer);
-        running = false;
-        playSound();
-        alert("Time's up!");
-      }
+        startButton.textContent = "Start";
+    } else {
+        startButton.textContent = "Pause";
+        startTimer();
+    }
+    isRunning = !isRunning;
+}
+
+// Start the Pomodoro timer
+function startTimer() {
+    timer = setInterval(() => {
+        if (seconds === 0 && minutes === 0) {
+            clearInterval(timer);
+            alert("Time's up! Take a break.");
+            resetTimer();
+        } else if (seconds === 0) {
+            minutes--;
+            seconds = 59;
+        } else {
+            seconds--;
+        }
+
+        updateDisplay();
+        updateProgressBar();
     }, 1000);
-  }
 }
 
+// Update the display with current time
+function updateDisplay() {
+    let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+    let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+    `timeDisplay.textContent = ${displayMinutes}:${displaySeconds}`;
+}
+
+// Update the progress bar
+function updateProgressBar() {
+    progress = (1 - (minutes * 60 + seconds) / (timerDuration / 1000)) * 100;
+    `progressBar.style.width = ${progress}%`;
+}
+
+// Reset the timer
 function resetTimer() {
-  clearInterval(timer);
-  running = false;
-  timeLeft = modes[currentMode];
-  updateDisplay();
+    clearInterval(timer);
+    isRunning = false;
+    minutes = 25;
+    seconds = 0;
+    progress = 0;
+    updateDisplay();
+    updateProgressBar();
+    startButton.textContent = "Start";
 }
 
-function setMode(mode) {
-  currentMode = mode;
-  resetTimer();
-}
-
-function playSound() {
-  const audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-07.mp3");
-  audio.play();
-}
-
-updateDisplay();
+// Event listeners
+startButton.addEventListener("click", toggleTimer);
+resetButton.addEventListener("click", resetTimer);
