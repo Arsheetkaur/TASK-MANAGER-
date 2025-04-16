@@ -1,0 +1,151 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #e6f2ff, #f8f9ff);
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #1e1e2f;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: white;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #00bfa6;
+  }
+  
+  /* Guide Section */
+  .guide {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .guide h1 {
+    font-size: 3rem;
+    color: #1e1e2f;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .guide .intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #555;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+  }
+  
+  /* Timeline Steps */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .step-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    transition: transform 0.4s, box-shadow 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .step-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 191, 166, 0.2);
+  }
+  
+  .step-number {
+    display: inline-block;
+    background: #00bfa6;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  
+  .step-card h2 {
+    color: #00bfa6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-card p {
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  /* Animations */
+  .visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .fade-in {
+    opacity: 0;
+  }
+  
+  .slide-in-left {
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+  
+  .slide-in-right {
+    transform: translateX(60px);
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+  
+  .slide-in-up {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.8s ease;
+  }

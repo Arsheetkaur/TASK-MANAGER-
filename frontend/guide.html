@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Guide - TaskFlow</title>
+  <link rel="stylesheet" href="guide.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo"><a href="index.html">TaskFlow</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="guide.html" class="active">Guide</a></li>
+    </ul>
+  </header>
+
+  <!-- Guide Section -->
+  <section class="guide">
+    <h1 class="fade-in">User Guide</h1>
+    <p class="intro fade-in">Follow these simple steps to master TaskFlow and boost your productivity.</p>
+
+    <div class="timeline">
+
+      <div class="step-card slide-in-left">
+        <span class="step-number">1</span>
+        <h2>Sign Up / Login</h2>
+        <p>Create an account or log in to access all features and track your progress.</p>
+      </div>
+
+      <div class="step-card slide-in-right">
+        <span class="step-number">2</span>
+        <h2>Create Tasks</h2>
+        <p>Add tasks, set priorities, and organize them with tags and deadlines.</p>
+      </div>
+
+      <div class="step-card slide-in-left">
+        <span class="step-number">3</span>
+        <h2>Use Pomodoro Timer</h2>
+        <p>Start focused sessions with timers and reward yourself with points.</p>
+      </div>
+
+      <div class="step-card slide-in-right">
+        <span class="step-number">4</span>
+        <h2>Collaborate</h2>
+        <p>Invite your team, assign tasks, and communicate in real-time.</p>
+      </div>
+
+      <div class="step-card slide-in-up">
+        <span class="step-number">5</span>
+        <h2>Track Progress</h2>
+        <p>Analyze your performance and team productivity using the dashboard.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TaskFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate on scroll
+    const observers = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up').forEach(el => {
+      observers.observe(el);
+    });
+  </script>
+
+</body>
+</html>
