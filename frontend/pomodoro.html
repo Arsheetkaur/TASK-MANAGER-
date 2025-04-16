@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TaskFlow - Pomodoro</title>
-  <link rel="stylesheet" href="pomodoro.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Pomodoro Timer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="pomodoro.css">
 </head>
 <body>
-  <header>
-    <h1>Pomodoro Timer</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="to-do.html">To-Do List</a>
-    </nav>
-  </header>
 
-  <main>
-    <div class="timer-container">
-      <div class="mode-buttons">
-        <button onclick="setMode('pomodoro')">Pomodoro</button>
-        <button onclick="setMode('shortBreak')">Short Break</button>
-        <button onclick="setMode('longBreak')">Long Break</button>
-      </div>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">TaskFlow</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </header>
 
-      <h2 id="timerDisplay">25:00</h2>
+    <!-- Pomodoro Timer Section -->
+    <section class="pomodoro-container">
+        <div class="pomodoro">
+            <h1>Pomodoro Timer</h1>
+            <div class="timer">
+                <span id="time-display">25:00</span>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="control-btn">Start</button>
+                <button id="reset-btn" class="control-btn">Reset</button>
+            </div>
+            <p class="description">Focus and boost productivity with the Pomodoro technique. Work for 25 minutes, then take a 5-minute break.</p>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+    </section>
 
-      <div class="controls">
-        <button onclick="startPauseTimer()">Start / Pause</button>
-        <button onclick="resetTimer()">Reset</button>
-      </div>
-    </div>
-  </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 TaskFlow. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
 
-  <script src="pomodoro.js"></script>
+    <!-- External JS -->
+    <script src="pomodoro.js"></script>
 </body>
 </html>
