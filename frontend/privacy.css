@@ -1,0 +1,99 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background: linear-gradient(to right, #f4f4f4, #eaeaea);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .blog-header {
+    background-color: #2d2dff;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  .blog-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Main blog content */
+  .blog-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Image */
+  .blog-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphs and lists */
+  .blog-container p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  
+  .blog-container ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .blog-container li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-header h1 {
+      font-size: 2rem;
+    }
+  
+    .blog-container {
+      padding: 15px;
+    }
+  }
