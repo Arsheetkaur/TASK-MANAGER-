@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mastering Deep Work</title>
+  <link rel="stylesheet" href="Blog-post2.css">
+</head>
+<body>
+
+<header class="blog-header">
+  <h1>Mastering Deep Work</h1>
+</header>
+
+<main class="blog-container">
+  <img src="https://i.pinimg.com/736x/cc/39/4b/cc394b9b32da1622157d884f1e310381.jpg" alt="Deep Work Image">
+  <p>“Deep Work” is the ability to focus without distraction on a cognitively demanding task. Here's how to master it:</p>
+  <ul>
+    <li>Block out deep work sessions in your calendar.</li>
+    <li>Eliminate all distractions (notifications, noise).</li>
+    <li>Work in a quiet environment with minimal interruptions.</li>
+    <li>Use noise-canceling headphones or focus music.</li>
+    <li>Train your concentration with regular practice.</li>
+    <li>Set clear goals for each session.</li>
+    <li>Keep your phone out of reach.</li>
+    <li>Reflect on what distracts you and fix it.</li>
+  </ul>
+</main>
+
+<script src="Blog-post2.js"></script>
+</body>
+</html>
