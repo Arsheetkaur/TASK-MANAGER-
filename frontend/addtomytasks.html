@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Task - Task Manager</title>
+  <link rel="stylesheet" href="addtomytasks.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Add Task to Your Dashboard</h1>
+  </header>
+
+  <main class="add-task-container">
+    <form id="addTaskForm">
+      <label for="title">Task Title</label>
+      <input type="text" id="title" value="Launch Your Portfolio Website" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" rows="5">This April, focus on completing your personal website and finally put your projects in the spotlight.</textarea>
+
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" required>
+
+      <label for="priority">Priority</label>
+      <select id="priority">
+        <option>High</option>
+        <option selected>Medium</option>
+        <option>Low</option>
+      </select>
+
+      <button type="submit" class="btn-submit">Add to Dashboard</button>
+    </form>
+
+    <div id="confirmation" class="confirmation hidden">
+      Task successfully added to your dashboard!
+    </div>
+  </main>
+
+  <script src="addtomytasks.js"></script>
+</body>
+</html>
