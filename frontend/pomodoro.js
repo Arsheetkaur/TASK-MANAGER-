@@ -9,6 +9,8 @@ let timer;
 let isRunning = false;
 let timeLeft;
 let progress = 0;
+let completedPomodoros = parseInt(localStorage.getItem('completedPomodoros')) || 0;
+let totalFocusTime = parseInt(localStorage.getItem('totalFocusTime')) || 0;
 const timeDisplay = document.getElementById("time-display");
 const progressBar = document.getElementById("progress");
 const startButton = document.getElementById("start-btn");
@@ -38,6 +40,11 @@ function startTimer() {
     timer = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timer);
+            // Update stats when pomodoro completes
+            completedPomodoros++;
+            totalFocusTime += getPomodoroDuration();
+            localStorage.setItem('completedPomodoros', completedPomodoros);
+            localStorage.setItem('totalFocusTime', totalFocusTime);
             alert("Time's up! Take a break.");
             resetTimer();
         } else {
