@@ -1,14 +1,25 @@
+// Add at the beginning of your pomodoro.js file
+function getPomodoroDuration() {
+    const savedDuration = localStorage.getItem('pomoDuration');
+    return savedDuration ? parseInt(savedDuration) : 25; // default to 25 if not set
+}
+
 // Initialize variables
 let timer;
 let isRunning = false;
-let minutes = 25;  // Pomodoro work duration in minutes
-let seconds = 0;
+let timeLeft;
 let progress = 0;
-let timerDuration = minutes * 60 * 1000;  // Convert to milliseconds
 const timeDisplay = document.getElementById("time-display");
 const progressBar = document.getElementById("progress");
 const startButton = document.getElementById("start-btn");
 const resetButton = document.getElementById("reset-btn");
+
+// Modify your timer initialization to use the saved duration
+function initializeTimer() {
+    const minutes = getPomodoroDuration();
+    timeLeft = minutes * 60; // Convert to seconds
+    updateDisplay();
+}
 
 // Start or pause the timer
 function toggleTimer() {
@@ -25,15 +36,12 @@ function toggleTimer() {
 // Start the Pomodoro timer
 function startTimer() {
     timer = setInterval(() => {
-        if (seconds === 0 && minutes === 0) {
+        if (timeLeft <= 0) {
             clearInterval(timer);
             alert("Time's up! Take a break.");
             resetTimer();
-        } else if (seconds === 0) {
-            minutes--;
-            seconds = 59;
         } else {
-            seconds--;
+            timeLeft--;
         }
 
         updateDisplay();
@@ -43,25 +51,26 @@ function startTimer() {
 
 // Update the display with current time
 function updateDisplay() {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
     let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
     let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
-    `timeDisplay.textContent = ${displayMinutes}:${displaySeconds}`;
+    timeDisplay.textContent = `${displayMinutes}:${displaySeconds}`;
 }
 
 // Update the progress bar
 function updateProgressBar() {
-    progress = (1 - (minutes * 60 + seconds) / (timerDuration / 1000)) * 100;
-    `progressBar.style.width = ${progress}%`;
+    const totalDuration = getPomodoroDuration() * 60; // Convert to seconds
+    progress = (1 - timeLeft / totalDuration) * 100;
+    progressBar.style.width = `${progress}%`;
 }
 
 // Reset the timer
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
-    minutes = 25;
-    seconds = 0;
+    initializeTimer();
     progress = 0;
-    updateDisplay();
     updateProgressBar();
     startButton.textContent = "Start";
 }
@@ -69,3 +78,6 @@ function resetTimer() {
 // Event listeners
 startButton.addEventListener("click", toggleTimer);
 resetButton.addEventListener("click", resetTimer);
+
+// Make sure to call initializeTimer when the page loads
+window.addEventListener('load', initializeTimer);
