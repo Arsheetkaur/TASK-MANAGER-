@@ -11,4 +11,4 @@ Users can create, edit, delete tasks, and mark them as completed or pending.
 - Mark tasks as completed or pending  
 
 This app helps users stay organized and keep track of their activities easily.
-![Uploading image.png…]()
+"C:\Users\arshe\OneDrive\Pictures\Screenshots\Screenshot 2025-04-25 151602.png"
