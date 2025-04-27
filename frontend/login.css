@@ -17,7 +17,11 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 800;
+<<<<<<< Updated upstream
   color: #2c3e50;
+=======
+  color: hsl(210, 29%, 24%);
+>>>>>>> Stashed changes
 }
 
 .nav-links {
