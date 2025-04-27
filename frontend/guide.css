@@ -1,151 +1,215 @@
-/* Base Reset */
-* {
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom right, #e6f2ff, #f8f9ff);
-    color: #333;
-    overflow-x: hidden;
+  .about-section,
+  .contact-section,
+  .privacy-section,
+  .guide-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
   
-  /* Header */
-  .header {
-    background-color: #1e1e2f;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
   }
   
-  .logo a {
-    color: white;
-    font-size: 1.7rem;
+  .greeting {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .about-content,
+  .privacy-content,
+  .guide-content {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-content h2,
+  .privacy-content h2,
+  .guide-content h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin: 20px 0 10px;
+  }
+  
+  .about-content p,
+  .privacy-content p,
+  .guide-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-content a,
+  .privacy-content a,
+  .guide-content a {
+    color: #007bff;
     text-decoration: none;
-    font-weight: 700;
   }
   
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+  .about-content a:hover,
+  .privacy-content a:hover,
+  .guide-content a:hover {
+    text-decoration: underline;
   }
   
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #00bfa6;
-  }
-  
-  /* Guide Section */
-  .guide {
-    padding: 4rem 2rem;
+  .cta {
+    margin-top: 30px;
     text-align: center;
   }
   
-  .guide h1 {
-    font-size: 3rem;
-    color: #1e1e2f;
-    margin-bottom: 1rem;
-    opacity: 0;
-    transition: opacity 1s ease;
+  .cta h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
   }
   
-  .guide .intro {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+  .cta p {
+    font-size: 1rem;
     color: #555;
-    opacity: 0;
-    transition: opacity 1s ease 0.5s;
+    margin-bottom: 20px;
   }
   
-  /* Timeline Steps */
-  .timeline {
+  .contact-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contact-form,
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    gap: 15px;
   }
   
-  .step-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    padding: 2rem;
-    max-width: 500px;
-    width: 90%;
-    transition: transform 0.4s, box-shadow 0.4s;
-    opacity: 0;
-    transform: translateY(30px);
+  .contact-form label {
+    font-size: 1rem;
+    color: #333;
   }
   
-  .step-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 191, 166, 0.2);
-  }
-  
-  .step-number {
-    display: inline-block;
-    background: #00bfa6;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-  }
-  
-  .step-card h2 {
-    color: #00bfa6;
-    margin-bottom: 0.5rem;
-  }
-  
-  .step-card p {
-    color: #444;
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 1rem;
   }
   
-  /* Footer */
-  .footer {
-    background-color: #1e1e2f;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 4rem;
+  .contact-form textarea {
+    height: 150px;
+    resize: vertical;
   }
   
-  /* Animations */
-  .visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+  .contact-form button {
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
   }
   
-  .fade-in {
-    opacity: 0;
+  .contact-form button:hover {
+    background: #0056b3;
   }
   
-  .slide-in-left {
-    transform: translateX(-60px);
-    opacity: 0;
-    transition: all 0.8s ease;
+  .contact-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
   }
   
-  .slide-in-right {
-    transform: translateX(60px);
-    opacity: 0;
-    transition: all 0.8s ease;
+  .map-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
   }
   
-  .slide-in-up {
-    transform: translateY(60px);
-    opacity: 0;
-    transition: all 0.8s ease;
+  body.dark-theme {
+    background-color: #1a1a1a;
+  }
+  
+  body.dark-theme .about-section,
+  body.dark-theme .contact-section,
+  body.dark-theme .privacy-section,
+  body.dark-theme .guide-section {
+    background: #2c2c2c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-theme h1,
+  body.dark-theme .about-content h2,
+  body.dark-theme .contact-form h2,
+  body.dark-theme .contact-info h2,
+  body.dark-theme .privacy-content h2,
+  body.dark-theme .guide-content h2,
+  body.dark-theme .cta h3 {
+    color: #f5f7fa;
+  }
+  
+  body.dark-theme .greeting,
+  body.dark-theme .about-content p,
+  body.dark-theme .privacy-content p,
+  body.dark-theme .guide-content p,
+  body.dark-theme .contact-info p,
+  body.dark-theme .cta p {
+    color: #ccc;
+  }
+  
+  body.dark-theme .contact-form input,
+  body.dark-theme .contact-form textarea {
+    background: #333;
+    border-color: #444;
+    color: #f5f7fa;
+  }
+  
+  @media (max-width: 768px) {
+    .about-section,
+    .contact-section,
+    .privacy-section,
+    .guide-section {
+        margin: 20px;
+        padding: 15px;
+    }
+  
+    .contact-content {
+        flex-direction: column;
+    }
+  
+    h1 {
+        font-size: 2rem;
+    }
+  
+    .about-content h2,
+    .contact-form h2,
+    .contact-info h2,
+    .privacy-content h2,
+    .guide-content h2 {
+        font-size: 1.5rem;
+    }
   }
