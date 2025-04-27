@@ -1,2 +1,15 @@
-# TASK-MANAGER-
-A simple and intuitive web application that allows users to manage their tasks efficiently. With features like task creation, editing, deletion, and task status updates (completed or pending), this app helps users organize and track their daily activities.
+# Task Manager
+
+A simple and intuitive web application for managing daily tasks.  
+Users can create, edit, delete tasks, and mark them as completed or pending.
+
+## Features
+
+- Add new tasks  
+- Edit existing tasks  
+- Delete tasks  
+- Mark tasks as completed or pending  
+
+This app helps users stay organized and keep track of their activities easily.
+![Uploading image.png…]()
+

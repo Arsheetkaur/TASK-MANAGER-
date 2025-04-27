@@ -1,35 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
+function handleSignup() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent form from reloading page
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    if (!email || !password) {
-      alert("Please fill in all fields.");
-      return;
+    if (!name || !email || !password || !confirmPassword) {
+        alert('Please fill in all fields.');
+        return;
     }
 
-    if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      return;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
     }
 
-    if (password.length < 6) {
-      alert("Password must be at least 6 characters.");
-      return;
+    if (!email.includes('@') || password.length < 6) {
+        alert('Please enter a valid email and a password with at least 6 characters.');
+        return;
     }
 
-    alert("Sign up successful!"); // Placeholder message
-    form.reset();
-  });
-
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-});
+    // Simulate signup (replace with actual backend API call)
+    alert('Signup successful! Redirecting to login...');
+    window.location.href = 'login.html';
+}
