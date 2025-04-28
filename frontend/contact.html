@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Task Manager</title>
-  <link rel="stylesheet" href="css/contact.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TaskFlow for support or inquiries.">
+    <title>TaskFlow - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="to-do.html">To-Do</a>
-      <a href="pomodoro.html">Pomodoro</a>
-      <a href="about.html">About</a>
+  <header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                    <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                    <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                    <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                    <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                    <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                </ul>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section class="contact-section">
-      <h2>Send Us a Message</h2>
-      <form>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required />
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required />
+    <main>
+        <section class="contact-section" aria-label="Contact TaskFlow">
+            <h1>Contact Us</h1>
+            <p id="greeting" class="greeting">We’d love to hear from you!</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit" class="cta-button">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Email:</strong> support@taskflow.com</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>Address:</strong> 123 Productivity Lane, Future City, FC 2025</p>
+                    <div class="map-placeholder">
+                        <img src="https://via.placeholder.com/300x200?text=Map" alt="Map of TaskFlow location">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
