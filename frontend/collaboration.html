@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meet the Team - Task Manager</title>
-  <link rel="stylesheet" href="collaboration.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collaborate with your team on TaskFlow projects.">
+    <title>TaskFlow - Collaboration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="collaboration.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
-  <header>
-    <h1>Meet the TaskFlow Team</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="to-do.html">To-Do</a>
-      <a href="settings.html">Settings</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="team">
-      <h2>Team Members</h2>
-      <div class="members">
-        <div class="card">
-          <h3>Ayaan</h3>
-          <p>Frontend Lead</p>
-          <p>HTML, CSS, UI</p>
-        </div>
-        <div class="card">
-          <h3>Riya</h3>
-          <p>JavaScript & Logic</p>
-          <p>To-Do, Pomodoro Features</p>
-        </div>
-        <div class="card">
-          <h3>Dev</h3>
-          <p>Version Control</p>
-          <p>GitHub Branches, Merges</p>
-        </div>
-        <div class="card">
-          <h3>Megha</h3>
-          <p>Stats & Analytics</p>
-          <p>Chart.js, localStorage</p>
-        </div>
-        <div class="card">
-          <h3>Arjun</h3>
-          <p>Design & Docs</p>
-          <p>UI Layouts, README</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="tools">
-      <h2>Collaboration Tools</h2>
-      <ul>
-        <li><strong>GitHub:</strong> Branching & Pull Requests</li>
-        <li><strong>VS Code Live Share:</strong> Pair Programming</li>
-        <li><strong>WhatsApp Group:</strong> Daily Standups</li>
-        <li><strong>Trello Board:</strong> Task Assignment</li>
-      </ul>
-    </section>
-  </main>
+    <main>
+        <section class="collaboration-section" aria-label="Team Collaboration">
+            <div class="collaboration-container">
+                <h1>Team Collaboration</h1>
+                <p>Work together seamlessly with your team on TaskFlow.</p>
+                <div class="team-form">
+                    <h3>Create a New Team</h3>
+                    <div class="form-group">
+                        <label for="teamName">Team Name</label>
+                        <input type="text" id="teamName" name="teamName" required placeholder="Enter team name">
+                    </div>
+                    <div class="form-group">
+                        <label for="teamMemberEmail">Add Member (Email)</label>
+                        <input type="email" id="teamMemberEmail" name="teamMemberEmail" placeholder="Enter member email">
+                        <button type="button" class="add-member-button" onclick="addTeamMember()">Add Member</button>
+                    </div>
+                    <div class="member-list" id="tempMemberList">
+                        <p>Added Members:</p>
+                        <ul id="tempMembers"></ul>
+                    </div>
+                    <button type="button" class="create-team-button" onclick="createTeam()">Create Team</button>
+                </div>
+                <div class="confirmation-message" id="confirmationMessage" style="display: none;">
+                    Action completed successfully!
+                </div>
+                <div class="team-list">
+                    <h3>Your Teams</h3>
+                    <ul id="teamList" class="team-list-items"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">TaskFlow</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="collaboration.js"></script>
 </body>
 </html>
-</stdio.h>
