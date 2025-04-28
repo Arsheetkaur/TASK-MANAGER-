@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Log in to TaskFlow to manage your tasks and boost productivity.">
-    <title>Task Manager - Login</title>
+    <meta name="description" content="Your TaskFlow dashboard for productivity insights and task management.">
+    <title>Task Manager - Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="dashboard.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
     <header class="header">
@@ -33,22 +33,35 @@
         </nav>
     </header>
 
+
     <main>
-        <section class="auth-section" aria-label="Login to TaskFlow">
-            <div class="auth-container">
-                <h1>Log In</h1>
-                <p>Access your tasks and boost your productivity.</p>
-                <div class="auth-form">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <section class="dashboard-section" aria-label="Productivity Dashboard">
+            <div class="dashboard-container">
+                <h1>Your Dashboard</h1>
+                <p>Get a quick overview of your productivity and tasks.</p>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card tasks-card">
+                        <h3>Tasks Overview</h3>
+                        <p><strong>Total Tasks:</strong> <span id="totalTasks">0</span></p>
+                        <ul id="taskList" class="task-list"></ul>
+                        <a href="addtomytasks.html" class="action-button">Add New Task</a>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    <div class="dashboard-card achievements-card">
+                        <h3>Recent Achievements</h3>
+                        <ul id="achievementList" class="achievement-list"></ul>
+                        <a href="achievements.html" class="action-button">View All Achievements</a>
                     </div>
-                    <button type="button" class="auth-button" onclick="handleLogin()">Log In</button>
-                    <p class="auth-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+                    <div class="dashboard-card analytics-card">
+                        <h3>Analytics Snapshot</h3>
+                        <p><strong>Points Earned:</strong> <span id="pointsEarned">0</span></p>
+                        <p><strong>Pomodoro Sessions:</strong> <span id="pomodoroSessions">0</span></p>
+                        <a href="analytics.html" class="action-button">View Full Analytics</a>
+                    </div>
+                    <div class="dashboard-card teams-card">
+                        <h3>Team Updates</h3>
+                        <ul id="teamList" class="team-list"></ul>
+                        <a href="collaboration.html" class="action-button">Manage Teams</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -56,17 +69,17 @@
 
     <footer class="main-footer" role="contentinfo">
         <div class="footer-content">
-            <div class="footer-logo">TaskFlow</div>
+            <div class="footer-logo">Task-Manager</div>
             <nav class="footer-nav">
                 <a href="guide.html">Guide</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy Policy</a>
             </nav>
-            <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+            <p class="footer-copy">© 2025 Task-Manager. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="login.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
