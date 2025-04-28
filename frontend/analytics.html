@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Analytics - TaskFlow</title>
-  <link rel="stylesheet" href="analytics.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyze your productivity with TaskFlow's analytics dashboard.">
+    <title>TaskFlow - Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="analytics.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
-  <header>
-    <h1>Your Productivity Stats</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="to-do.html">To-Do</a>
-      <a href="pomodoro.html">Pomodoro</a>
-      <a href="settings.html">Settings</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="stats">
-      <div class="stat-box">
-        <h2 id="totalTasks">0</h2>
-        <p>Tasks Completed</p>
-      </div>
-      <div class="stat-box">
-        <h2 id="totalPomos">0</h2>
-        <p>Pomodoros Completed</p>
-      </div>
-      <div class="stat-box">
-        <h2 id="totalFocus">0 mins</h2>
-        <p>Total Focus Time</p>
-      </div>
-    </section>
 
-    <section class="chart-section">
-      <canvas id="productivityChart" width="400" height="200"></canvas>
-    </section>
-  </main>
+    <main>
+        <section class="analytics-section" aria-label="Productivity Analytics">
+            <div class="analytics-container">
+                <h1>Your Productivity Analytics</h1>
+                <p>Track your progress and optimize your workflow with TaskFlow.</p>
+                <div class="metrics-grid">
+                    <div class="metric-card" data-metric="tasks">
+                        <h3>Total Tasks Completed</h3>
+                        <p id="totalTasks">0</p>
+                    </div>
+                    <div class="metric-card" data-metric="avgTasks">
+                        <h3>Avg. Tasks per Day</h3>
+                        <p id="avgTasks">0</p>
+                    </div>
+                    <div class="metric-card" data-metric="points">
+                        <h3>Points Earned</h3>
+                        <p id="pointsEarned">0</p>
+                    </div>
+                    <div class="metric-card" data-metric="pomodoro">
+                        <h3>Pomodoro Sessions</h3>
+                        <p id="pomodoroSessions">0</p>
+                    </div>
+                </div>
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Tasks Completed Over Time</h3>
+                        <canvas id="tasksChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Pomodoro Sessions per Day</h3>
+                        <canvas id="pomodoroChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="analytics.js"></script>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">TaskFlow</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="analytics.js"></script>
 </body>
 </html>
