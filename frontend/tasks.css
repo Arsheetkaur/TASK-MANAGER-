@@ -1,78 +1,78 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f0f2f5;
-    color: #333;
-  }
-  
-  header {
-    background: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  footer {
-    background: #007bff;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
-  .task-container {
-    padding: 2rem;
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  
-  .task-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  .task-card h3 {
-    margin: 0 0 0.5rem;
-  }
-  
-  .task-card .description {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-right: 5px;
-  }
-  
-  .priority-low { background: #e0f7e9; color: #2e7d32; }
-  .priority-medium { background: #fff4e5; color: #f57c00; }
-  .priority-high { background: #ffebee; color: #c62828; }
-  
-  .status {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 0.75rem;
-    padding: 3px 8px;
-    border-radius: 5px;
-    background: #dee2e6;
-    color: #333;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+header {
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.task-container {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.task-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.task-card .description {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.priority-low { background: #e0f7e9; color: #2e7d32; }
+.priority-medium { background: #fff4e5; color: #f57c00; }
+.priority-high { background: #ffebee; color: #c62828; }
+
+.status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #dee2e6;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
