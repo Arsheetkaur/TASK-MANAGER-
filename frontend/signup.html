@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up - TaskFlow</title>
-  <link rel="stylesheet" href="signup.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for TaskFlow to start managing your tasks for free.">
+    <title>Task Manager - Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
-  <header>
-    <h1>Sign Up for TaskFlow</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="login.html">Login</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="signup-form">
-      <form>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Enter your email" required />
+    <main>
+        <section class="auth-section" aria-label="Sign Up for TaskFlow">
+            <div class="auth-container">
+                <h1>Sign Up</h1>
+                <p>Join TaskFlow and start organizing your tasks for free.</p>
+                <div class="auth-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                    </div>
+                    <button type="button" class="auth-button" onclick="handleSignup()">Sign Up</button>
+                    <p class="auth-link">Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required />
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">TaskFlow</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <button type="submit">Sign Up</button>
-      </form>
-    </section>
-  </main>
+    <script src="signup.js"></script>
 </body>
 </html>

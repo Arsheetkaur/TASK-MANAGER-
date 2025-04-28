@@ -1,0 +1,108 @@
+/* === GLOBAL STYLES === */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(145deg, #1e1e2f, #27293d);
+    color: #fff;
+  }
+  
+  /* === HEADER NAVBAR === */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #121220;
+    padding: 15px 30px;
+    border-bottom: 2px solid #00ffe7;
+  }
+  
+  .site-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ffe7;
+  }
+  
+  .site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .site-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .site-header nav ul li a:hover,
+  .site-header nav ul li a.active {
+    color: #00ffe7;
+  }
+  
+  /* === PAGE HEADER === */
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    color: #000;
+  }
+  
+  /* === ACHIEVEMENT CARDS === */
+  .achievement-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .achievement-card {
+    background: #202040;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.4);
+  }
+  
+  .achievement-card.locked {
+    filter: grayscale(1);
+    opacity: 0.6;
+  }
+  
+  .achievement-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .achievement-description {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: gold;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  /* === FOOTER === */
+  .site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #121220;
+    color: #aaa;
+    font-size: 0.9rem;
+    border-top: 2px solid #00ffe7;
+  }
