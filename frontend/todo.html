@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  feature/task-manager-core
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager - To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="todo.css" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Task Manager - To-Do List</title>
   <link rel="stylesheet" href="todo.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+ 
 </head>
 <body>
+   
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header Section -->
-  <header class="todo-header">
-    <h1>My Tasks</h1>
-    <p>Stay organized and productive with your daily goals.</p>
-  </header>
+   
+    <main class="todo-container">
+        <h1>My To-Do List</h1>
 
-  <!-- To-Do Input Section -->
-  <section class="todo-app">
-    <div class="input-section">
-      <input type="text" id="task-input" placeholder="Add a new task..." />
-      <button id="add-task-btn">Add Task</button>
-    </div>
+       
+        <div class="todo-input">
+            <input type="text" id="task-input" placeholder="Enter a new task..." required />
+            <textarea id="task-notes" placeholder="Add notes..."></textarea>
+            <input type="datetime-local" id="task-time" />
+            <select id="task-priority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
+        </div>
 
-    <!-- Task List Section -->
-    <ul id="task-list">
-      <!-- Tasks will be dynamically added here -->
-    </ul>
-  </section>
+        
+        <div class="priority-columns">
+            <div class="priority-box" id="low-box">
+                <h2>Low Priority</h2>
+                <ul id="low-tasks" class="task-list"></ul>
+            </div>
+            <div class="priority-box" id="medium-box">
+                <h2>Medium Priority</h2>
+                <ul id="medium-tasks" class="task-list"></ul>
+            </div>
+            <div class="priority-box" id="high-box">
+                <h2>High Priority</h2>
+                <ul id="high-tasks" class="task-list"></ul>
+            </div>
+        </div>
+    </main>
 
-  <!-- Script for interactivity -->
-  <script>
-    const addTaskBtn = document.getElementById("add-task-btn");
-    const taskInput = document.getElementById("task-input");
-    const taskList = document.getElementById("task-list");
+    
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
 
-    addTaskBtn.addEventListener("click", () => {
-      const taskText = taskInput.value.trim();
-      if (taskText === "") return;
-
-      const listItem = document.createElement("li");
-      listItem.className = "task-item";
-      listItem.innerHTML = `
-        <span class="task-text">${taskText}</span>
-        <button class="complete-btn">✓</button>
-        <button class="delete-btn">×</button>
-      `;
-
-      taskList.appendChild(listItem);
-      taskInput.value = "";
-    });
-
-    taskList.addEventListener("click", (e) => {
-      if (e.target.classList.contains("delete-btn")) {
-        e.target.parentElement.remove();
-      } else if (e.target.classList.contains("complete-btn")) {
-        e.target.parentElement.classList.toggle("completed");
-      }
-    });
-  </script>
-
+    <script src="todo.js"></script>
 </body>
 </html>
-<!-- Temporary change for Git test -->
