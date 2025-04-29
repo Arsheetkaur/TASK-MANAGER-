@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard - TaskFlow</title>
-  <link rel="stylesheet" href="dashboard.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your TaskFlow dashboard for productivity insights and task management.">
+    <title>Task Manager - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Your Dashboard</h1>
-    <nav>
-      <a href="to-do.html">To-Do</a>
-      <a href="pomodoro.html">Pomodoro</a>
-      <a href="stats.html">Stats</a>
-      <a href="settings.html">Settings</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="overview">
-      <div class="card">
-        <h2>Today's Tasks</h2>
-        <p id="taskCount">0 tasks left</p>
-        <a href="todo.html" class="btn">Go to To-Do</a>
-      </div>
 
-      <div class="card">
-        <h2>Start Focus Session</h2>
-        <p>Ready for a Pomodoro?</p>
-        <a href="pomodoro.html" class="btn">Start Timer</a>
-      </div>
+    <main>
+        <section class="dashboard-section" aria-label="Productivity Dashboard">
+            <div class="dashboard-container">
+                <h1>Your Dashboard</h1>
+                <p>Get a quick overview of your productivity and tasks.</p>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card tasks-card">
+                        <h3>Tasks Overview</h3>
+                        <p><strong>Total Tasks:</strong> <span id="totalTasks">0</span></p>
+                        <ul id="taskList" class="task-list"></ul>
+                        <a href="addtomytasks.html" class="action-button">Add New Task</a>
+                    </div>
+                    <div class="dashboard-card achievements-card">
+                        <h3>Recent Achievements</h3>
+                        <ul id="achievementList" class="achievement-list"></ul>
+                        <a href="achievements.html" class="action-button">View All Achievements</a>
+                    </div>
+                    <div class="dashboard-card analytics-card">
+                        <h3>Analytics Snapshot</h3>
+                        <p><strong>Points Earned:</strong> <span id="pointsEarned">0</span></p>
+                        <p><strong>Pomodoro Sessions:</strong> <span id="pomodoroSessions">0</span></p>
+                        <a href="analytics.html" class="action-button">View Full Analytics</a>
+                    </div>
+                    <div class="dashboard-card teams-card">
+                        <h3>Team Updates</h3>
+                        <ul id="teamList" class="team-list"></ul>
+                        <a href="collaboration.html" class="action-button">Manage Teams</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <div class="card">
-        <h2>Quick Stats</h2>
-        <p id="quickStats">0 tasks | 0 mins focused</p>
-        <a href="stats.html" class="btn">View Stats</a>
-      </div>
-    </section>
-  </main>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task-Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task-Manager. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <script src="dashboard.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

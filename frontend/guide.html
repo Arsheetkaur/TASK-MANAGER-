@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with TaskFlow using our user guide.">
+    <title>Task Manager - User Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                    <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                    <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                    <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                    <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                    <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                </ul>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="guide-section" aria-label="User Guide">
+            <h1>TaskFlow User Guide</h1>
+            <p id="greeting" class="greeting">Get started with TaskFlow!</p>
+            <div class="guide-content">
+                <h2>1. Sign Up or Log In</h2>
+                <p>Create an account via <a href="signup.html">signup</a> or log in at <a href="login.html">login</a> to access all features.</p>
+                
+                <h2>2. Create and Manage Tasks</h2>
+                <p>Use the <a href="tasks.html">Tasks</a> page to add, edit, and complete tasks. Set due dates and priorities to stay organized.</p>
+                
+                <h2>3. Boost Focus with Pomodoro</h2>
+                <p>Try the <a href="pomodoro.html">Pomodoro Timer</a> to work in focused intervals and maintain productivity.</p>
+                
+                <h2>4. Collaborate with Your Team</h2>
+                <p>Invite team members via the <a href="collaboration.html">Collaboration</a> feature to share tasks and track progress.</p>
+                
+                <h2>5. Track Your Progress</h2>
+                <p>Visit <a href="analytics.html">Analytics</a> to review task completion rates and productivity trends.</p>
+                
+                <h2>6. Explore Productivity Tips</h2>
+                <p>Check out our <a href="index.html#blog-posts">blog</a> for tips like “Top 10 Productivity Hacks” and “Mastering Deep Work.”</p>
+                
+                <h2>7. Customize Your Profile</h2>
+                <p>Update your details and settings in your <a href="profile.html">Profile</a> to personalize your experience.</p>
+                
+                <p>Need help? Visit our <a href="contact.html">contact page</a> or explore more on the <a href="index.html">homepage</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">TaskFlow</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 TaskFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="static.js"></script>
+</body>
+</html>

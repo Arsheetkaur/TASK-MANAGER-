@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  feature/task-manager-core
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager - To-Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add new tasks to your Task Manager task list.">
+    <title>Task Manager - Add Task</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="todo.css" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Task Manager - To-Do List</title>
-  <link rel="stylesheet" href="todo.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
- 
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="addtomytasks.css">
 </head>
 <body>
-   
     <header class="header">
         <div class="logo">Task Manager</div>
         <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -40,42 +32,28 @@
         </nav>
     </header>
 
-   
-    <main class="todo-container">
-        <h1>My To-Do List</h1>
-
-       
-        <div class="todo-input">
-            <input type="text" id="task-input" placeholder="Enter a new task..." required />
-            <textarea id="task-notes" placeholder="Add notes..."></textarea>
-            <input type="datetime-local" id="task-time" />
-            <select id="task-priority">
-                <option value="low">Low Priority</option>
-                <option value="medium">Medium Priority</option>
-                <option value="high">High Priority</option>
-            </select>
-            <button onclick="addTask()">Add Task</button>
-            <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
-        </div>
-
-        
-        <div class="priority-columns">
-            <div class="priority-box" id="low-box">
-                <h2>Low Priority</h2>
-                <ul id="low-tasks" class="task-list"></ul>
+    <main>
+        <section class="add-task-section" aria-label="Add New Task">
+            <h1>Add New Task</h1>
+            <p id="authPrompt" style="display: none;">Please <a href="login.html">log in</a> or <a href="signup.html">sign up</a> to add tasks.</p>
+            <div class="task-form" id="taskForm">
+                <form id="addTaskForm">
+                    <label for="taskInput">Task Description</label>
+                    <input type="text" id="taskInput" placeholder="Enter task description" required>
+                    <label for="priorityInput">Priority</label>
+                    <select id="priorityInput">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <label for="dueDateInput">Due Date</label>
+                    <input type="date" id="dueDateInput" required>
+                    <button type="submit" id="addTaskButton" disabled>Add Task</button>
+                </form>
             </div>
-            <div class="priority-box" id="medium-box">
-                <h2>Medium Priority</h2>
-                <ul id="medium-tasks" class="task-list"></ul>
-            </div>
-            <div class="priority-box" id="high-box">
-                <h2>High Priority</h2>
-                <ul id="high-tasks" class="task-list"></ul>
-            </div>
-        </div>
+        </section>
     </main>
 
-    
     <footer class="main-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-logo">Task Manager</div>
@@ -89,6 +67,7 @@
         </div>
     </footer>
 
-    <script src="todo.js"></script>
+    <script src="script.js"></script>
+    <script src="addtomytasks.js"></script>
 </body>
 </html>
