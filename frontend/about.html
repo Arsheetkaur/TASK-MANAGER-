@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Task Manager, our mission, and our team.">
+    <title>Task Manager - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                    <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                    <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                    <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                    <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                    <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="about-section" aria-label="About Task Manager">
+            <h1>About Task Manager</h1>
+            <p id="greeting" class="greeting">Welcome to Task Manager!</p>
+            <div class="about-content">
+                <h2>Our Mission</h2>
+                <p>Task Manager is dedicated to helping individuals and teams boost productivity with free, intuitive tools. Our mission is to simplify task management, foster collaboration, and empower everyone to achieve their goals.</p>
+                
+                <h2>Our Features</h2>
+                <p>From to-do lists and Pomodoro timers to team collaboration and analytics, Task Manager offers a suite of free tools designed to streamline your workflow. Explore our <a href="index.html#features">features</a> to learn more.</p>
+                
+                <h2>Our Team</h2>
+                <p>We’re a passionate group of developers, designers, and productivity enthusiasts committed to making TaskFlow the best task management platform. Based in the future (2025!), we’re always innovating to meet your needs.</p>
+                
+                <div class="cta">
+                    <h3>Join Task Manager Today</h3>
+                    <p>Get started for free and take control of your productivity.</p>
+                    <a href="signup.html" class="cta-button btn-glow" aria-label="Sign up for Task Manager">Sign Up Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

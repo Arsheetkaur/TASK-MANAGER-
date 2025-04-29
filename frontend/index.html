@@ -1,153 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TaskPro - Ultimate Team Task Manager</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boost your productivity with Task Manager, a free task manager for teams and individuals.">
+    <title>Task Manager - Free Task Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" onerror="this.href='fallback-style.css';">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- ===== HEADER NAVIGATION BAR ===== -->
-  <header class="navbar">
-    <div class="logo">TaskPro</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+    <main>
+        <section class="hero" aria-label="Welcome to Task Manager">
+            <div class="hero-text">
+                <h1>Organize. Collaborate. Succeed.</h1>
+                <p>Boost your productivity with Task Manager— a free task manager for teams and individuals.</p>
+                <a href="signup.html" class="cta-button" aria-label="Get started with TaskFlow">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.pinimg.com/736x/75/9c/00/759c00524c7b8fbd4368e12817a4c994.jpg" alt="Illustration of a team collaborating in a modern office">
+            </div>
+        </section>
 
-        <!-- Features Dropdown Menu with links to separate feature pages -->
-        <li class="dropdown">
-          <a href="#">Features</a>
-          <ul class="dropdown-menu">
-            <li><a href="todo.html">To-Do List</a></li>
-            <li><a href="pomodoro.html">Pomodoro + Rewards</a></li>
-            <li><a href="collab.html">Team Collaboration</a></li>
-            <li><a href="focus.html">Focus Mode</a></li>
-            <li><a href="dashboard.html">User Dashboard</a></li>
-          </ul>
-        </li>
+        <section class="features" aria-label="Key Features">
+            <h2>Features</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <img src="https://i.pinimg.com/originals/d2/6c/86/d26c86854a03d2f645437d05b4d6acd6.gif" alt="Animated task management icon">
+                    <h3>Task Management</h3>
+                    <p>Create and track tasks with simple tools.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://i.pinimg.com/736x/40/fb/1f/40fb1f40e7d8d2eb8fc3d9f296896993.jpg" alt="Team collaboration icon">
+                    <h3>Collaboration</h3>
+                    <p>Work with teammates in real-time efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://i.pinimg.com/originals/8c/df/08/8cdf08b343fb88273cdc8801d2a2d7b0.gif" alt="Animated Pomodoro timer icon">
+                    <h3>Pomodoro Timer</h3>
+                    <p>Stay focused with integrated time management.</p>
+                </div>
+            </div>
+        </section>
 
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#how">How to Use</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons">
-      <a href="login.html" class="btn">Login</a>
-      <a href="signup.html" class="btn primary">Sign Up</a>
-    </div>
-  </header>
+        <section class="how-it-works" aria-label="How TaskFlow Works">
+            <h2>How Task Manager Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="https://i.pinimg.com/736x/20/21/35/20213585795b1d232af28c9106038247.jpg" alt="Illustration of signing up">
+                    <h4>1. Sign Up</h4>
+                    <p>Create your account in a few clicks.</p>
+                </div>
+                <div class="step">
+                    <img src="https://i.pinimg.com/736x/04/19/dd/0419dde691399e5317979a44efd3cf1f.jpg" alt="Illustration of task creation">
+                    <h4>2. Create Tasks</h4>
+                    <p>Add tasks and to-do lists easily.</p>
+                </div>
+                <div class="step">
+                    <img src="https://i.pinimg.com/736x/f1/9d/ff/f19dff60fa4d3285ea3cfc1d46fe351f.jpg" alt="Illustration of team collaboration">
+                    <h4>3. Collaborate</h4>
+                    <p>Invite your team and manage tasks together.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ===== HERO / INTRODUCTION SECTION ===== -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Organize. Focus. Achieve.</h1>
-        <p>The smart task manager built for powerful productivity, fun, and team collaboration — all in one place.</p>
-        <a href="signup.html" class="btn primary">Get Started Free</a>
-      </div>
-      <div class="hero-image">
-        <!-- Relevant animated GIF -->
-        <img src="https://i.pinimg.com/originals/cb/80/6b/cb806b41e70e6b6f4334a6c6a1668a46.gif" alt="Productivity GIF"/>
-      </div>
-    </div>
-  </section>
+        <section class="task-month" aria-label="Task of the Month">
+            <h2>Task of the Month</h2>
+            <div class="task-highlight">
+                <img src="https://i.pinimg.com/736x/30/f4/bc/30f4bca1a4e4c764b5c841910cba768e.jpg" alt="Illustration of task achievement">
+                <div>
+                    <h3>Launch Your Portfolio Website</h3>
+                    <p>This April, focus on completing your personal website. Add it to your tasks now!</p>
+                    <a href="addtomytasks.html" class="btn-action" aria-label="Add task to my tasks">Add to My Tasks</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- ===== BENEFITS SECTION ===== -->
-  <section id="benefits" class="benefits">
-    <h2>Why You'll Love TaskPro</h2>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <h3>Aesthetic Design</h3>
-        <p>Clean, modern interface designed for clarity and joy.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Fully Animated</h3>
-        <p>Smooth transitions and hover effects bring everything to life.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Boosted Focus</h3>
-        <p>Built-in focus mode & gamification to level up your productivity.</p>
-      </div>
-    </div>
-  </section>
+        <section class="recommended" aria-label="Recommended Features">
+            <h2>Recommended for You</h2>
+            <div class="recommend-grid">
+                <div class="recommend-card">
+                    <h3>Try Our Calendar View</h3>
+                    <p>Organize tasks visually with our calendar layout.</p>
+                </div>
+                <div class="recommend-card">
+                    <h3>Pomodoro Timer</h3>
+                    <p>Boost focus with built-in Pomodoro sessions.</p>
+                </div>
+                <div class="recommend-card">
+                    <h3>Daily Productivity Recap</h3>
+                    <p>Get insights into your daily task progress.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ===== FEATURES OVERVIEW SECTION (Link to other files) ===== -->
-  <section id="features" class="features">
-    <h2>Explore Our Features</h2>
-    <div class="features-grid">
-      <a href="todo.html" class="feature-card" id="todo">
-        <h3>To-Do List</h3>
-        <p>Manage tasks with drag-and-drop, priorities, and tags.</p>
-      </a>
-      <a href="pomodoro.html" class="feature-card" id="pomodoro">
-        <h3>Pomodoro + Rewards</h3>
-        <p>Work in sessions. Earn points. Play mini-games. Stay focused.</p>
-      </a>
-      <a href="collab.html" class="feature-card" id="collab">
-        <h3>Team Collaboration</h3>
-        <p>Assign tasks, chat with your team, and track joint progress.</p>
-      </a>
-      <a href="focus.html" class="feature-card" id="focus">
-        <h3>Focus Mode</h3>
-        <p>Block distractions and enter deep work with voice controls.</p>
-      </a>
-      <a href="dashboard.html" class="feature-card" id="dashboard">
-        <h3>Personal Dashboard</h3>
-        <p>Visualize your progress, streaks, and daily goals in one place.</p>
-      </a>
-    </div>
-  </section>
+        <section class="upcoming-section" aria-label="Upcoming Features">
+            <h2 class="section-title">Upcoming Feature Releases</h2>
+            <div class="release-container">
+                <div class="release-card">
+                    <h3>May</h3>
+                    <p>AI-Powered Task Suggestions</p>
+                </div>
+                <div class="release-card">
+                    <h3>June</h3>
+                    <p>Team Chat Integration</p>
+                </div>
+                <div class="release-card">
+                    <h3>July</h3>
+                    <p>Smart Deadline Detection</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ===== HOW TO USE SECTION ===== -->
-  <section id="how" class="how-to">
-    <h2>How It Works</h2>
-    <ol class="steps">
-      <li>Sign up and create your workspace.</li>
-      <li>Add tasks or start a focus session with Pomodoro.</li>
-      <li>Invite teammates and collaborate on projects.</li>
-      <li>Track your productivity and earn rewards!</li>
-    </ol>
-  </section>
+        <section class="testimonials-section" aria-label="User Testimonials">
+            <h2 class="section-heading">Testimonials</h2>
+            <div class="testimonial-container">
+                <article class="testimonial-card">
+                    <img src="https://i.pinimg.com/736x/8b/1f/9f/8b1f9f145889835124f968a6aa82b79f.jpg" alt="Profile photo of Alex R.">
+                    <p>"Task Manager helped us manage projects efficiently for free. Great tool!"</p>
+                    <span class="name">- Alex R., Project Manager</span>
+                </article>
+                <article class="testimonial-card">
+                    <img src="https://i.pinimg.com/736x/8b/1f/9f/8b1f9f145889835124f968a6aa82b79f.jpg" alt="Profile photo of Mia L.">
+                    <p>"Love the Pomodoro feature. Simple and effective for free use!"</p>
+                    <span class="name">- Mia L., Freelancer</span>
+                </article>
+            </div>
+        </section>
 
-  <!-- ===== REVIEWS / TESTIMONIALS SECTION ===== -->
-  <section id="reviews" class="reviews">
-    <h2>What Our Users Say</h2>
-    <div class="review-cards">
-      <div class="review">
-        <p>"This is not just a task manager. It’s a motivation booster!"</p>
-        <h4>- Riya, Developer</h4>
-      </div>
-      <div class="review">
-        <p>"Our entire team uses TaskPro daily. Love the gamification!"</p>
-        <h4>- Aarav, Team Lead</h4>
-      </div>
-    </div>
-  </section>
+        <section class="blog-posts" aria-label="Latest Productivity Tips">
+            <h2>Latest Productivity Tips</h2>
+            <div class="blog-cards">
+                <article class="blog-card">
+                    <img src="https://i.pinimg.com/736x/dd/87/c7/dd87c78e4917be96451280cce352552e.jpg" alt="Illustration of productivity hacks">
+                    <h3>Top 10 Productivity Hacks</h3>
+                    <p>Unlock your potential with free, science-backed tricks.</p>
+                    <a href="blog-post1.html" class="read-more" aria-label="Read more about productivity hacks">Read More</a>
+                </article>
+                <article class="blog-card">
+                    <img src="https://i.pinimg.com/736x/cc/39/4b/cc394b9b32da1622157d884f1e310381.jpg" alt="Illustration of focus techniques">
+                    <h3>Mastering Deep Work</h3>
+                    <p>Stay focused and block distractions for free.</p>
+                    <a href="blog-post2.html" class="read-more" aria-label="Read more about deep work">Read More</a>
+                </article>
+                <article class="blog-card">
+                    <img src="https://i.pinimg.com/736x/cc/39/4b/cc394b9b32da1622157d884f1e310381.jpg" alt="Illustration of productivity tips">
+                    <h3>Effective Time Management</h3>
+                    <p>Maximize your day with proven strategies.</p>
+                    <a href="blog-post3.html" class="read-more" aria-label="Read more about time management">Read More</a>
+                </article>
+            </div>
+        </section>
 
-  <!-- ===== NEWSLETTER / SUBSCRIBE SECTION ===== -->
-  <section id="newsletter" class="newsletter">
-    <h2>Stay Updated!</h2>
-    <p>Subscribe to receive the latest features, updates, and tips.</p>
-    <form class="subscribe-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit" class="btn primary">Subscribe</button>
-    </form>
-  </section>
+        <section class="user-spotlight" aria-label="User Spotlight">
+            <h2>User Spotlight</h2>
+            <div class="spotlight-content">
+                <img src="https://i.pinimg.com/736x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg" alt="Profile photo of Jordan K.">
+                <div class="spotlight-info">
+                    <h3>Jordan K., Team Lead</h3>
+                    <p>Jordan boosted his team's output by 40% using TaskFlow's free features!</p>
+                    <a href="story-detail.html" class="btn-profile" aria-label="View Jordan's story">View Story</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- ===== FOOTER SECTION ===== -->
-  <footer class="footer">
-    <p>&copy; 2025 TaskPro. Built by Team 5 with love and coffee.</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Support</a>
-    </div>
-  </footer>
+        <section class="task-queue" aria-label="My Task Queue">
+            <h2>My Task Queue</h2>
+            <ul class="queue-list" id="taskList">
+                <li><input type="checkbox" onchange="toggleTask(this)"> Prepare pitch deck</li>
+                <li><input type="checkbox" onchange="toggleTask(this)"> Email client follow-up</li>
+                <li><input type="checkbox" onchange="toggleTask(this)"> Draft new blog post</li>
+            </ul>
+            <a href="tasks.html" class="btn-action" aria-label="Go to full task list">Go to Full Task List</a>
+        </section>
 
-  <!-- Javascript file -->
-   <script src="script.js"></script>
+        <section class="final-cta" aria-label="Final Call to Action">
+            <h2>Ready to boost your productivity?</h2>
+            <a href="signup.html" class="cta-button" aria-label="Join Task Manager now">Join Task Manager Now</a>
+        </section>
+    </main>
 
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

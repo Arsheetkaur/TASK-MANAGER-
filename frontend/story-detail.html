@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read how Jordan K. boosted his team's output by 40% with Task Manager.">
+    <title>Task Manager - Jordan K.'s Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="story-detail.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                    <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                    <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                    <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                    <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                    <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <section class="story-section" aria-label="User Story">
+            <h1>Jordan K.’s Success Story</h1>
+            <img src="https://i.pinimg.com/736x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg" alt="Profile photo of Jordan K." class="story-image">
+            <article class="story-content">
+                <p>As a Team Lead at a fast-paced startup, Jordan K. faced the challenge of keeping his team organized and productive. With deadlines looming and tasks piling up, he turned to Task Manager’s free tools to transform his team’s workflow.</p>
+                <h2>Streamlining Task Management</h2>
+                <p>Jordan used Task Manager’s <a href="tasks.html">Tasks</a> feature to assign and track tasks for his team. By setting clear due dates and priorities, he ensured everyone stayed on the same page, reducing missed deadlines by 50%.</p>
+                <h2>Boosting Collaboration</h2>
+                <p>The <a href="collaboration.html">Collaboration</a> tool allowed Jordan to invite team members to shared projects, enabling real-time updates and feedback. This cut down on lengthy email threads and improved team communication.</p>
+                <h2>Tracking Progress with Analytics</h2>
+                <p>With Task Manager’s <a href="analytics.html">Analytics</a>, Jordan monitored task completion rates and identified bottlenecks. By addressing these insights, he increased his team’s output by an impressive 40% in just three months.</p>
+                <h2>Staying Focused</h2>
+                <p>Jordan also leveraged the <a href="pomodoro.html">Pomodoro Timer</a> to encourage focused work sessions, helping his team tackle complex tasks without burnout.</p>
+                <p>“Task Manager’s free tools gave us the structure we needed to succeed,” says Jordan. “It’s like having a personal productivity coach for our entire team!”</p>
+                <div class="cta">
+                    <h3>Ready to Transform Your Workflow?</h3>
+                    <p>Join Jordan and thousands of others by signing up for Task Manager today.</p>
+                    <a href="signup.html" class="cta-button btn-glow" aria-label="Sign up for Task Manager">Get Started</a>
+                </div>
+            </article>
+
+            <section class="related-stories" aria-label="Related Stories">
+                <h2>More User Stories</h2>
+                <p>Stay tuned for more inspiring stories from Task Manager users!</p>
+            </section>
+
+            <section class="comments" aria-label="Comments">
+                <h2>Comments</h2>
+                <div class="comment-form" id="commentForm">
+                    <h3>Add a Comment</h3>
+                    <p id="commentAuthPrompt" style="display: none;">Please <a href="login.html">log in</a> or <a href="signup.html">sign up</a> to comment.</p>
+                    <form id="commentFormSubmit">
+                        <textarea id="commentText" placeholder="Write your comment..." required></textarea>
+                        <button type="submit" id="submitComment" disabled>Submit</button>
+                    </form>
+                </div>
+                <div class="comment-list" id="commentList"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

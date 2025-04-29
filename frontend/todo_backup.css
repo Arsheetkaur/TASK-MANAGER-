@@ -1,0 +1,351 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  font-size: 16px;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #27ae60;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.drop-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.btn-glow {
+  padding: 8px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-glow:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+}
+
+/* To-Do List Specific Styles */
+/* Container for the entire To-Do app */
+.todo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Main heading style */
+.todo-container h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Input section for adding new tasks */
+.todo-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+/* Styles for input fields, textarea, and select */
+.todo-input input[type="text"],
+.todo-input textarea,
+.todo-input input[type="datetime-local"],
+.todo-input select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+  max-width: 100%;
+}
+
+/* Textarea specific styling */
+.todo-input textarea {
+  height: 60px;
+  resize: vertical;
+}
+
+/* Add Task button styling */
+.todo-input button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-input button:hover {
+  background-color: #219653;
+}
+
+/* Clear All button styling */
+.clear-btn {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Priority columns container */
+.priority-columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Individual priority box styling */
+.priority-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  min-height: 400px;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Prevents shrinking to maintain one row */
+}
+
+/* Priority-Specific Colors */
+#low-box {
+  background-color: #e0f7fa; /* Light Cyan for Low Priority */
+}
+
+#low-box h2 {
+  color: #00bcd4; /* Cyan for Low Priority Header */
+}
+
+#medium-box {
+  background-color: #fff3e0; /* Light Orange for Medium Priority */
+}
+
+#medium-box h2 {
+  color: #ff9800; /* Orange for Medium Priority Header */
+}
+
+#high-box {
+  background-color: #ffebee; /* Light Red for High Priority */
+}
+
+#high-box h2 {
+  color: #f44336; /* Red for High Priority Header */
+}
+
+/* Priority box heading */
+.priority-box h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Task list styling */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual task item styling */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  color: #95a5a6;
+  background-color: #ecf0f1;
+}
+
+.task-item:hover {
+  transform: translateX(5px);
+}
+
+/* Task content styling */
+.task-content {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+/* Task notes styling */
+.task-notes {
+  font-size: 14px;
+  color: #7f8c8d;
+  display: none;
+}
+
+.task-item:hover .task-notes {
+  display: block;
+}
+
+/* Task action buttons styling */
+.task-actions button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.task-actions .edit-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.task-actions .edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.task-actions .delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.task-actions .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.task-actions .complete-btn {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.task-actions .complete-btn:hover {
+  background-color: #219653;
+}
+
+/* Drag and Drop */
+.task-item {
+  cursor: move;
+}
+
+.task-item.dragging {
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .priority-columns {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .priority-box {
+      width: 100%;
+      max-width: 350px;
+  }
+
+  .todo-input {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .todo-input input,
+  .todo-input textarea,
+  .todo-input select,
+  .todo-input button,
+  .todo-input .clear-btn {
+      width: 100%;
+  }
+}

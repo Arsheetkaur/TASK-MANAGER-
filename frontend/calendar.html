@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calendar.css" />
+</head>
+<body>
+    <!-- Header Section - Consistent with Task Manager Theme -->
+    <header class="header">
+        <div class="logo">Task Manager</div>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle" aria-haspopup="true" aria-expanded="false">Features <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="todo.html" role="menuitem">To-Do List</a></li>
+                        <li><a href="pomodoro.html" role="menuitem">Pomodoro Timer</a></li>
+                        <li><a href="calendar.html" role="menuitem">Calendar</a></li>
+                        <li><a href="collaboration.html" role="menuitem">Collaboration</a></li>
+                        <li><a href="analytics.html" role="menuitem">Analytics</a></li>
+                        <li><a href="achievements.html" role="menuitem">Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn-glow" aria-label="Sign up">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Calendar Container -->
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month" class="nav-btn">←</button>
+            <h2 id="month-year" class="month-title"></h2>
+            <button id="next-month" class="nav-btn">→</button>
+        </div>
+        <div class="day-names">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        <div class="days" id="calendar-days"></div>
+    </div>
+
+    <!-- Task Modal -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h3 id="selected-date" class="modal-title"></h3>
+            <textarea id="task-input" placeholder="Enter your task or note here..."></textarea>
+            <button id="save-task" class="save-btn">Save</button>
+            <div id="saved-tasks" class="task-list"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section - Consistent with Task Manager Theme -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">Task Manager</div>
+            <nav class="footer-nav">
+                <a href="guide.html">Guide</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+            <p class="footer-copy">© 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
