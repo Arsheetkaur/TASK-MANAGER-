@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  feature/task-manager-core
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager - To-Do List</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="todo.css" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Task Manager - To-Do List</title>
-  <link rel="stylesheet" href="todo.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
- 
 </head>
 <body>
-   
+    <!-- Header Section - Consistent with Homepage -->
     <header class="header">
         <div class="logo">Task Manager</div>
         <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -40,11 +32,11 @@
         </nav>
     </header>
 
-   
+    <!-- Main To-Do App Section -->
     <main class="todo-container">
         <h1>My To-Do List</h1>
 
-       
+        <!-- Task Input Section -->
         <div class="todo-input">
             <input type="text" id="task-input" placeholder="Enter a new task..." required />
             <textarea id="task-notes" placeholder="Add notes..."></textarea>
@@ -58,7 +50,7 @@
             <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
         </div>
 
-        
+        <!-- Priority Columns Section -->
         <div class="priority-columns">
             <div class="priority-box" id="low-box">
                 <h2>Low Priority</h2>
@@ -75,7 +67,7 @@
         </div>
     </main>
 
-    
+    <!-- Footer Section - Consistent with Homepage -->
     <footer class="main-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-logo">Task Manager</div>
