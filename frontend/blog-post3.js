@@ -1,18 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Story page loaded');
+  console.log('Blog page loaded');
   checkAuth();
   loadComments();
-
-  // Add event listener for comment form submission
-  const commentForm = document.getElementById('commentFormSubmit');
-  if (commentForm) {
-      commentForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          addComment('story-details');
-      });
-  } else {
-      console.error('Comment form not found');
-  }
 });
 
 // Check authentication status
@@ -24,12 +13,12 @@ function checkAuth() {
       const submitComment = document.getElementById('submitComment');
 
       if (!commentForm || !commentAuthPrompt || !submitComment) {
-          console.error('Comment form elements missing:', { commentForm, commentAuthPrompt, submitComment });
+          console.error('Comment form elements not found');
           return;
       }
 
-      if (user && JSON.parse(user)) {
-          console.log('User authenticated:', JSON.parse(user));
+      if (user) {
+          console.log('User found in localStorage:', JSON.parse(user));
           commentAuthPrompt.style.display = 'none';
           submitComment.disabled = false;
       } else {
@@ -45,14 +34,10 @@ function checkAuth() {
 // Load comments from localStorage
 function loadComments() {
   try {
+      const postId = getPostId();
       const user = JSON.parse(localStorage.getItem('user')) || {};
-      const comments = JSON.parse(localStorage.getItem('comments_story-details')) || [];
+      const comments = JSON.parse(localStorage.getItem(`comments_${postId}`)) || [];
       const commentList = document.getElementById('commentList');
-
-      if (!commentList) {
-          console.error('Comment list element not found');
-          return;
-      }
 
       commentList.innerHTML = comments.map(comment => `
           <div class="comment">
@@ -62,12 +47,12 @@ function loadComments() {
               </div>
               <p>${comment.text}</p>
               ${user.email === comment.authorEmail ? `
-                  <button class="delete-button" onclick="deleteComment('story-details', '${comment.id}')">Delete</button>
+                  <button class="delete-button" onclick="deleteComment('${postId}', '${comment.id}')">Delete</button>
               ` : ''}
           </div>
       `).join('');
 
-      console.log('Comments loaded:', comments.length);
+      console.log('Comments loaded for', postId, ':', comments);
   } catch (error) {
       console.error('Error in loadComments:', error);
   }
@@ -77,42 +62,32 @@ function loadComments() {
 function addComment(postId) {
   try {
       const user = JSON.parse(localStorage.getItem('user'));
-      if (!user || !user.email) {
-          console.warn('User not authenticated');
+      if (!user) {
           alert('Please log in to comment.');
           return;
       }
 
-      const commentTextElement = document.getElementById('commentText');
-      if (!commentTextElement) {
-          console.error('Comment text element not found');
-          return;
-      }
-
-      const commentText = commentTextElement.value.trim();
+      const commentText = document.getElementById('commentText').value.trim();
       if (!commentText) {
-          console.warn('Empty comment attempted');
           alert('Comment cannot be empty.');
           return;
       }
 
       let comments = JSON.parse(localStorage.getItem(`comments_${postId}`)) || [];
-      const newComment = {
+      comments.push({
           id: Date.now().toString(),
           author: user.name || 'Anonymous',
           authorEmail: user.email,
           text: commentText,
           timestamp: new Date().toISOString()
-      };
+      });
 
-      comments.push(newComment);
       localStorage.setItem(`comments_${postId}`, JSON.stringify(comments));
-      commentTextElement.value = '';
+      document.getElementById('commentText').value = '';
       loadComments();
-      console.log('Comment added:', newComment);
+      console.log('Comment added to', postId);
   } catch (error) {
       console.error('Error in addComment:', error);
-      alert('Failed to add comment. Please try again.');
   }
 }
 
@@ -124,10 +99,15 @@ function deleteComment(postId, commentId) {
           comments = comments.filter(comment => comment.id !== commentId);
           localStorage.setItem(`comments_${postId}`, JSON.stringify(comments));
           loadComments();
-          console.log('Comment deleted:', commentId);
+          console.log('Comment deleted from', postId, ':', commentId);
       } catch (error) {
           console.error('Error in deleteComment:', error);
-          alert('Failed to delete comment. Please try again.');
       }
   }
+}
+
+// Get current post ID from filename
+function getPostId() {
+  const path = window.location.pathname.split('/').pop().replace('.html', '');
+  return path || 'blog-post1'; // Default to blog-post1 if path is unclear
 }
