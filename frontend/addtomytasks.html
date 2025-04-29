@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Log in to TaskFlow to manage your tasks and boost productivity.">
-    <title>Task Manager - Login</title>
+    <meta name="description" content="Add new tasks to your TaskFlow task list.">
+    <title>Task Manager - Add Task</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="homepage.css" onerror="this.href='fallback-style.css';">
+    <link rel="stylesheet" href="addtomytasks.css">
 </head>
 <body>
     <header class="header">
@@ -34,22 +35,23 @@
     </header>
 
     <main>
-        <section class="auth-section" aria-label="Login to TaskFlow">
-            <div class="auth-container">
-                <h1>Log In</h1>
-                <p>Access your tasks and boost your productivity.</p>
-                <div class="auth-form">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Enter your password">
-                    </div>
-                    <button type="button" class="auth-button" onclick="handleLogin()">Log In</button>
-                    <p class="auth-link">Don't have an account? <a href="signup.html">Sign up</a></p>
-                </div>
+        <section class="add-task-section" aria-label="Add New Task">
+            <h1>Add New Task</h1>
+            <p id="authPrompt" style="display: none;">Please <a href="login.html">log in</a> or <a href="signup.html">sign up</a> to add tasks.</p>
+            <div class="task-form" id="taskForm">
+                <form id="addTaskForm">
+                    <label for="taskInput">Task Description</label>
+                    <input type="text" id="taskInput" placeholder="Enter task description" required>
+                    <label for="priorityInput">Priority</label>
+                    <select id="priorityInput">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <label for="dueDateInput">Due Date</label>
+                    <input type="date" id="dueDateInput" required>
+                    <button type="submit" id="addTaskButton" disabled>Add Task</button>
+                </form>
             </div>
         </section>
     </main>
@@ -67,6 +69,7 @@
         </div>
     </footer>
 
-    <script src="login.js"></script>
+    <script src="script.js"></script>
+    <script src="addtomytasks.js"></script>
 </body>
 </html>

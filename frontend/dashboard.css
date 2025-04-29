@@ -87,7 +87,7 @@ body {
   background: #f5f7fa;
 }
 
-.settings-section {
+.dashboard-section {
   min-height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
@@ -95,125 +95,160 @@ body {
   padding: 2rem;
 }
 
-.settings-container {
-  max-width: 600px;
+.dashboard-container {
+  max-width: 1200px;
   width: 100%;
   text-align: center;
 }
 
-.settings-container h1 {
+.dashboard-container h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #2c3e50;
 }
 
-.settings-container p {
+.dashboard-container p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #666;
 }
 
-.settings-form {
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   opacity: 0;
   transform: translateY(50px);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.settings-form.animate {
+.dashboard-card.animate {
   animation: slideIn 0.5s ease-out forwards;
 }
 
-.settings-card {
-  margin-bottom: 2rem;
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
 }
 
-.settings-card h3 {
+.dashboard-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #2c3e50;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-  text-align: left;
+.dashboard-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
-.form-group label {
+.dashboard-card p span {
+  color: #007bff;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  display: block;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-list li:last-child {
+  border-bottom: none;
+}
+
+.task-list li span {
+  flex: 1;
+  text-align: left;
+  font-size: 0.9rem;
   color: #333;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.task-list li button {
+  background: #28a745;
+  color: #fff;
+  border: none;
   border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.form-group input[type="checkbox"] {
-  margin-right: 0.5rem;
+.task-list li button:hover {
+  background: #218838;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-  border-color: #007bff;
-  outline: none;
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
-.save-button {
+.achievement-list li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.achievement-list li:last-child {
+  border-bottom: none;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.team-list li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.team-list li:last-child {
+  border-bottom: none;
+}
+
+.action-button {
+  display: inline-block;
   background: #007bff;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.save-button:hover {
-  background: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
-
-.clear-data-button {
-  background: #dc3545;
-  color: #fff;
   padding: 0.5rem 1rem;
-  border: none;
   border-radius: 5px;
+  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
-  cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
-.clear-data-button:hover {
-  background: #c82333;
-  box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
-}
-
-.confirmation-message {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #28a745;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.confirmation-message.show {
-  opacity: 1;
+.action-button:hover {
+  background: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .main-footer {
@@ -268,7 +303,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .settings-container {
-      padding: 1rem;
+  .dashboard-grid {
+      grid-template-columns: 1fr;
   }
 }
